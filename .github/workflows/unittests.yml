@@ -2,7 +2,10 @@ name: Python Unit Tests
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - master
+      - task-1
   pull_request:
     branches: [ main ]
 

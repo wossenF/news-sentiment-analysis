@@ -16,3 +16,11 @@ def load_news_data(filename="raw_analyst_ratings.csv"):
         raise FileNotFoundError(f"File not found: {file_path}")
 
     return pd.read_csv(file_path)
+
+def load_stock_data(filename):
+    file_path = BASE_DIR / "data" / "raw" / filename
+
+    if not file_path.exists():
+        raise FileNotFoundError(f"File not found: {file_path}")
+
+    return pd.read_csv(file_path)
